@@ -3,44 +3,44 @@
 a dqx language translate assistant
 
 
-## ËµÃ÷
+## è¯´æ˜
 
-ÕâÊÇ»ùÓÚDQXÓÎÏ·ÈÈÇéÖÆ×÷µÄÒ»¸ö¼òµ¥·­ÒëÖúÊÖ¹¤¾ß£¬ÓÃOCR·½Ê½°ÑÓÎÏ·ÄÚÄ³¸öÇøÓòµÄÎÄ×ÖÊ¶±ğ³öÀ´ºó½»¸ø·­Òë¹¤¾ß·­Òë¡£
-
-
-## ±àÒëËµÃ÷
-
-ÏîÄ¿Ê¹ÓÃ Visual Studio 2019 ¿ª·¢£¬ÔËĞĞ»·¾³ÊÇ .Net Framework 4.7.2
+è¿™æ˜¯åŸºäºDQXæ¸¸æˆçƒ­æƒ…åˆ¶ä½œçš„ä¸€ä¸ªç®€å•ç¿»è¯‘åŠ©æ‰‹å·¥å…·ï¼Œç”¨OCRæ–¹å¼æŠŠæ¸¸æˆå†…æŸä¸ªåŒºåŸŸçš„æ–‡å­—è¯†åˆ«å‡ºæ¥åäº¤ç»™ç¿»è¯‘å·¥å…·ç¿»è¯‘ã€‚
 
 
-## ÏÂÔØ±àÒëºÃµÄ°æ±¾
+## ç¼–è¯‘è¯´æ˜
 
-ÏÂÔØµØÖ· https://github.com/john-guo/dqxEnthuse/releases/download/0.0.1/dqxenthuse.zip
+é¡¹ç›®ä½¿ç”¨ Visual Studio 2019 å¼€å‘ï¼Œè¿è¡Œç¯å¢ƒæ˜¯ .Net Framework 4.7.2
 
 
-## Ê¹ÓÃËµÃ÷
+## ä¸‹è½½ç¼–è¯‘å¥½çš„ç‰ˆæœ¬
 
-µã»÷Locateºó»®³ö¶Ô»°ËùÔÚÇøÓò£¬È»ºó¹¤¾ß¾Í»á×Ô¶¯¹¤×÷£¬°Ñ¶Ô»°ÎÄ×ÖÊ¶±ğ³ö·ÅÈëText´°¿ÚÏÔÊ¾²¢´æÈë¼ôÌù°å¡£
+ä¸‹è½½åœ°å€ https://github.com/john-guo/dqxEnthuse/releases/download/0.0.1/dqxenthuse.zip
 
-¹¤¾ß±¾Éí²»´ø·­Òë¹¦ÄÜ£¬¿ÉÒÔ²ÉÓÃÍøÒ³ÔÚÏß·­Òë·½Ê½µÃµ½·­Òë½á¹û£¬ÕâÀïÒÔDeeplÎªÀıËµÃ÷ÔõÃ´½øĞĞ×Ô¶¯·­Òë¡£
 
-Ê×ÏÈÓÃä¯ÀÀÆ÷´ò¿ªdeepl¹ÙÍø(https://www.deepl.com/translator)£¬È»ºóÔÚ¿ØÖÆÌ¨ÔËĞĞÒÔÏÂÃüÁî£º
+## ä½¿ç”¨è¯´æ˜
+
+ç‚¹å‡»Locateååˆ’å‡ºå¯¹è¯æ‰€åœ¨åŒºåŸŸï¼Œç„¶åå·¥å…·å°±ä¼šè‡ªåŠ¨å·¥ä½œï¼ŒæŠŠå¯¹è¯æ–‡å­—è¯†åˆ«å‡ºæ”¾å…¥Textçª—å£æ˜¾ç¤ºå¹¶å­˜å…¥å‰ªè´´æ¿ã€‚
+
+å·¥å…·æœ¬èº«ä¸å¸¦ç¿»è¯‘åŠŸèƒ½ï¼Œå¯ä»¥é‡‡ç”¨ç½‘é¡µåœ¨çº¿ç¿»è¯‘æ–¹å¼å¾—åˆ°ç¿»è¯‘ç»“æœï¼Œè¿™é‡Œä»¥Deeplä¸ºä¾‹è¯´æ˜æ€ä¹ˆè¿›è¡Œè‡ªåŠ¨ç¿»è¯‘ã€‚
+
+é¦–å…ˆç”¨æµè§ˆå™¨æ‰“å¼€deeplå®˜ç½‘ (https://www.deepl.com/translator) ï¼Œç„¶ååœ¨æ§åˆ¶å°è¿è¡Œä»¥ä¸‹å‘½ä»¤ï¼š
 
 `
 t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('change',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
 `
 
-Ò²¿ÉÒÔÍ¨¹ı"add favorites"·½Ê½°ÑÒÔÏÂµØÖ·Ìí¼Ó½øÈ¥²¢ÔÚdeepl´ò¿ªºóµã»÷Õâ¸öµØÖ·:
+ä¹Ÿå¯ä»¥é€šè¿‡"add favorites"æ–¹å¼æŠŠä»¥ä¸‹åœ°å€æ·»åŠ è¿›å»å¹¶åœ¨deeplæ‰“å¼€åç‚¹å‡»è¿™ä¸ªåœ°å€:
 
 `
 javascript:t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('change',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
 `
 
-È»ºó±£³ÖdeeplÍøÒ³´°¿ÚÔÚ¼¤»î×´Ì¬£¬¹¤¾ßºÍä¯ÀÀÆ÷¼ä¾ÍÄÜÁª¶¯ÊµÊ±·­Òë£¬ÕâÖÖ·­Òë·½Ê½È±µãÊÇ·­ÒëÍøÒ³´°¿Ú±ØĞë±£³Ö¼¤»î£¬ÕâÑùµ¼ÖÂÖ»ÓĞÊÖ±úÍæ¼ÒÄÜ²»ÊÜÓ°Ïì£¬ºÃ´¦ÊÇ¹æ±ÜÁË·­ÒëÈí¼şµÄÉÌÒµĞí¿É¡£
+ç„¶åä¿æŒdeeplç½‘é¡µçª—å£åœ¨æ¿€æ´»çŠ¶æ€ï¼Œå·¥å…·å’Œæµè§ˆå™¨é—´å°±èƒ½è”åŠ¨å®æ—¶ç¿»è¯‘ï¼Œè¿™ç§ç¿»è¯‘æ–¹å¼ç¼ºç‚¹æ˜¯ç¿»è¯‘ç½‘é¡µçª—å£å¿…é¡»ä¿æŒæ¿€æ´»ï¼Œè¿™æ ·å¯¼è‡´åªæœ‰æ‰‹æŸ„ç©å®¶èƒ½ä¸å—å½±å“ï¼Œå¥½å¤„æ˜¯è§„é¿äº†ç¿»è¯‘è½¯ä»¶çš„å•†ä¸šè®¸å¯ã€‚
 
 
 
-## Ê¹ÓÃµ½µÄµÚÈı·½¿â
+## ä½¿ç”¨åˆ°çš„ç¬¬ä¸‰æ–¹åº“
 
 OpenCVSharp https://github.com/shimat/opencvsharp
 
