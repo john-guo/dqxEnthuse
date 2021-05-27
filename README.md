@@ -13,6 +13,11 @@ a dqx language translate assistant
 项目使用 Visual Studio 2019 开发，运行环境是 .Net Framework 4.7.2
 
 
+## 下载编译好的版本
+
+下载地址 https://github.com/john-guo/dqxEnthuse/releases/download/0.0.1/dqxenthuse.zip
+
+
 ## 使用说明
 
 点击Locate后划出对话所在区域，然后工具就会自动工作，把对话文字识别出放入Text窗口显示并存入剪贴板。

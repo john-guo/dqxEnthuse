@@ -19,7 +19,6 @@ namespace dqxEnthuse
     public partial class Form1 : Form
     {
         Rectangle rect;
-        Mat target;
         bool ok = false;
         private TesseractEngine engine;
 
@@ -54,7 +53,6 @@ namespace dqxEnthuse
                     return;
                 }
                 rect = win.Rect;
-                target = win.Target;
                 await Task.Delay(500);
                 text1.Show();
                 backgroundWorker1.RunWorkerAsync();
@@ -66,7 +64,6 @@ namespace dqxEnthuse
             Bitmap image = new Bitmap(rect.Width, rect.Height);
             Graphics g = Graphics.FromImage(image);
             var levenshtein = new Levenshtein();
-            var cosine = new Cosine();
             while (!backgroundWorker1.CancellationPending)
             {
                 try
@@ -85,14 +82,7 @@ namespace dqxEnthuse
                                 continue;
                             }
 
-                            var st = Stopwatch.StartNew();
                             var ld = 1.0 - levenshtein.Distance(prevText, text) / Math.Max(prevText.Length, text.Length);
-                            st.Stop();
-                            var ldtime = st.Elapsed.TotalMilliseconds;
-                            st = Stopwatch.StartNew();
-                            var cd = cosine.Similarity(prevText, text);
-                            st.Stop();
-                            var cdtime = st.Elapsed.TotalMilliseconds;
                             if (ld < 0.7)
                             {
                                 prevText = text;
@@ -103,18 +93,9 @@ namespace dqxEnthuse
                                 }
                             }
 
-                            var regions = page.GetSegmentedRegions(PageIteratorLevel.Block);
-                            foreach (var region in regions)
-                            {
-                                textBox1.Invoke((Action)delegate
-                                {
-                                    textBox1.AppendText($"{region} {Environment.NewLine}");
-                                });
-                            }
-
                             textBox1.Invoke((Action)delegate
                             {
-                                textBox1.AppendText($"Mean confidence: {page.GetMeanConfidence()}  LD : {ld}  T: {ldtime}  CD : {cd}  T: {cdtime} {Environment.NewLine}");
+                                textBox1.AppendText($"Mean confidence: {page.GetMeanConfidence()}  LD : {ld}  {Environment.NewLine}");
                                 textBox1.AppendText($"Text: {text} {Environment.NewLine}");
                             });
                         }
