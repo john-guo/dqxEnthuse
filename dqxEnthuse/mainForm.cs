@@ -16,7 +16,7 @@ using F23.StringSimilarity;
 
 namespace dqxEnthuse
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
         Rectangle rect;
         bool ok = false;
@@ -25,7 +25,7 @@ namespace dqxEnthuse
         private TextForm text1;
         private string prevText = string.Empty;
 
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
             engine = new TesseractEngine(@"./tessdata", "jpn", EngineMode.Default);
@@ -73,7 +73,7 @@ namespace dqxEnthuse
                     using (var page = engine.Process(image))
                     {
                         var confidence = page.GetMeanConfidence();
-                        if (confidence > 0.5)
+                        if (confidence > 0.1)
                         {
                             var text = page.GetText();
                             if (string.IsNullOrWhiteSpace(text))
@@ -83,7 +83,7 @@ namespace dqxEnthuse
                             }
 
                             var ld = 1.0 - levenshtein.Distance(prevText, text) / Math.Max(prevText.Length, text.Length);
-                            if (ld < 0.7)
+                            if (ld < 0.85)
                             {
                                 prevText = text;
                                 text = text.Replace(" ", "").Trim();
