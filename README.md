@@ -27,17 +27,18 @@ a dqx language translate assistant
 首先用浏览器打开deepl官网 (https://www.deepl.com/translator) ，然后在控制台运行以下命令：
 
 `
-t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('change',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
+t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('keyup',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
 `
 
 也可以通过"add favorites"方式把以下地址添加进去并在deepl打开后点击这个地址:
 
 `
-javascript:t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('change',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
+javascript:t=document.getElementsByTagName("textarea")[0];setInterval(()=>window.navigator.clipboard.readText().then(x=>{if(x=='')return;t.value=x;e=document.createEvent('HTMLEvents');e.initEvent('keyup',false,false);t.dispatchEvent(e);window.navigator.clipboard.writeText('');}), 1000);
 `
 
 然后保持deepl网页窗口在激活状态，工具和浏览器间就能联动实时翻译，这种翻译方式缺点是翻译网页窗口必须保持激活，这样导致只有手柄玩家能不受影响，好处是规避了翻译软件的商业许可。
 
+注：百度翻译(https://fanyi.baidu.com/)也可以用此方法。
 
 
 ## 使用到的第三方库
