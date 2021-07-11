@@ -38,7 +38,7 @@ javascript:t=document.getElementsByTagName("textarea")[0];setInterval(()=>window
 
 然后保持deepl网页窗口在激活状态，工具和浏览器间就能联动实时翻译，这种翻译方式缺点是翻译网页窗口必须保持激活，这样导致只有手柄玩家能不受影响，好处是规避了翻译软件的商业许可。
 
-注：百度翻译(https://fanyi.baidu.com/)也可以用此方法。
+注：百度翻译 (https://fanyi.baidu.com/) 也可以用此方法。
 
 
 ## 使用到的第三方库
